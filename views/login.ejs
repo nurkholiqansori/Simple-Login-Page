@@ -1,0 +1,39 @@
+<div class="container text-center">
+    <form class="form-signin" target="/users/login" method="POST">
+        <div class="img-custom">
+            <a href="../" ><img src="../img/logoUAS.png" class="img-thumbnail rounded-circle" alt="logo" width="250" height="150"></a>
+        </div>
+		
+		<%- include ('./partials/messages') %>
+		
+		<div class="form-floating mb-2">
+			<input type="username" name="username" class="form-control" id="floatingInputValue" placeholder="NPM/NIDN anda" value="<% typeof npm != 'undefined' ? npm : '' %>" autofocus >
+			<label for="floatingInputValue" style="color: var(--bs-gray)"> Username </label>
+		</div>
+		
+        <div class="form-floating mb-2">
+			<input type="password" id="password" name="password" class="form-control" placeholder="Password" value="<% typeof password != 'undefined' ? password : '' %>">
+			<label for="password" style="color: var(--bs-gray)"> Password </label>
+		</div>
+		
+		<div class="mb-2">
+			<input class="form-check-input" type="checkbox" onclick="showHide()">
+			<label class="form-check-label"> Tampilkan Password  </label>
+		</div>
+		
+        <button class="btn btn-lg btn-login" type="submit"> Masuk </button>
+		<div class="text-center">
+	</div>
+    </form>
+    <script>
+    function showHide() {
+        var showHide = document.getElementById('password');
+        if (showHide.type === "password") {
+        showHide.type = "text";
+        }
+        else {
+        showHide.type = "password";
+        }
+    }
+    </script>
+</div>

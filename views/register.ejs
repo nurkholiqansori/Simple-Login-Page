@@ -1,0 +1,57 @@
+<div class="container text-center">
+    <form class="form-signin" target="/users/register" method="POST">
+        <div class="img-custom">
+            <a href="../" ><img src="../img/logoUAS.png" class="img-thumbnail rounded-circle" alt="logo" width="250" height="150"></a>
+        </div>
+		
+        <div class="badge alert {{messageClass}}"> {{message}} </div>
+		
+		<%- include ('./partials/messages') %>
+		
+		<div class="input-group mb-2">
+			<label for="name" class="input-group-text"> Nama </label>
+			<input type="name" name="name" class="form-control" placeholder="Nama anda" value="<% typeof name != 'undefined' ? name : '' %>" autofocus>
+		</div>
+		
+		<div class="input-group mb-2">
+			<label for="username" class="input-group-text"> Username</label>
+			<input type="username" name="username" class=" form-control" placeholder="NIM/NIDN anda" value="<% typeof npm != 'undefined' ? npm : '' %>" autofocus >
+		</div>
+		
+		<div class="input-group mb-2">
+			<label class="input-group-text" for="tipeAkun">Tipe Akun</label>
+			<select name="tipeAkun" class="form-select">
+				<option value="" selected>Pilih..</option>
+				<option value="dosen">Dosen</option>
+				<option value="mahasiswa">Mahasiswa</option>
+			</select>
+		</div>
+		
+		<div class="input-group mb-2">
+			<label for="password" class="input-group-text"> Password </label>
+			<input type="password" id="password" name="password" class="form-control" placeholder="Password" value="<% typeof password != 'undefined' ? password : '' %>">
+		</div>
+		
+		<div class="mb-2">
+			<input class="form-check-input" type="checkbox" onclick="showHide()">
+			<label class="form-check-label"> Tampilkan Password  </label>
+		</div>
+		
+        <button class="btn btn-lg btn-login" type="submit"> Daftar </button>
+		<div class="text-center">
+		atau
+		<a href="/users/login"> Login </a>
+	</div>
+    </form>
+    <script>
+    function showHide() {
+        var showHide = document.getElementById('password');
+        if (showHide.type === "password") {
+        showHide.type = "text";
+        }
+        else {
+        showHide.type = "password";
+        }
+    }
+    </script>
+</div>

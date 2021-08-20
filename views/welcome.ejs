@@ -1,0 +1,37 @@
+<div class="container-sm">
+	<div class="bg-mid">
+		<div class="row-cus">
+			<div class="col offset-md-3">
+				<div class="img-custom">
+					<img src="../img/logoUAS.png" class="img-thumbnail rounded-circle margin-top-cus" alt="logo" width="250" height="150">
+				</div>
+			</div>
+			<div class="col  margin-bot-cus welcome">
+				<h1> Selamat Datang di </h1>
+				<h2> Ujian Online </h2>
+				<a href="/users/login"><button class="btn btn-lg btn-login">Login  </button></a>
+				<a href="/users/register"><button class="btn btn-lg btn-login">Register  </button></a>
+				<button type="button" class="btn btn-lg btn-login" onclick="var modal1 = document.getElementById('modal');modal1.style.display='block';modal1.style.animation='animatefadein 0.8s';"> About </button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="modal" class="modal-cus">
+    <div class="modal-cus-content animate-top card-cus">
+		<div class="container bg-color-cus modal-cus-header"> 
+			<span onclick="var modal = document.getElementById('modal');modal.style.display='none';modal.style.animation='animatefadeout 1s 2';"  class="button-cus display-topright"> &times; </span>
+			<h2> About </h2>
+		</div>
+		<div class="container modal-cus-body">
+			<p> Tugas ini bersamaan dengan dibuatnya proposal yang berjudul <i>“Analisis dan Perancangan Sistem Informasi Ujian Online Berbasis Web pada Universitas Mitra Karya Kota Bekasi”</i> dalam memenuhi tugas mata kuliah Rekayasa Perangkat Lunak (RPL) yang diampu oleh Bapak Wowon Priatna, ST., MTi.</p> 
+			<p> Tugas ini dibuat  dengan Html, Css dan JavaScript.</p>
+			- Aplikasi server mengganakan Laragon <br>
+			- Css menggunakan bootstrap v.5.0.0<br>
+			- Back-end menggunakan nodeJS, expressJS<br>
+			- Database menggunakan mongoDB<br>
+		</div>
+		<footer class="container bg-color-cus modal-cus-footer text-center">
+			&copy; 
+		</footer>
+    </div>
+ </div>
