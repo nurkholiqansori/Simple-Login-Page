@@ -1,10 +1,33 @@
-# Halaman Login sederhana
+# Simple Login System
 
 
-Ubah <code> YOUR MONGO URL</code>  didalam <code> app.js </code>
+Build with:
 
-lalu ```npm install``` 
-dan <code> npm start </code>
+- Express.js
+- Node.js
+- MongoDB (Mongoose)
+- Passport.js
+- EJS Templates
+- Bootstrap
 
-buka browser dan ketikkan
-<code> localhost:3000 </code>
+## Features
+
+- Login
+- Registration
+- Logout
+- Dashboard
+
+## Installation
+
+- Install the dependencies
+
+    ```bash
+    npm install
+    ```
+
+- Run the server
+
+    ```bash
+    npm run start
+    ```
+The server will be running on port 3000.
